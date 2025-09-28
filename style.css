@@ -1,0 +1,58 @@
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+:root {
+    --outside:  #FFF8E7;
+    --textColor: #F5F5DC;
+    --orange: #FF9900;
+}
+.text-common {
+    
+}
+body {
+    background-color: black;
+    
+
+}
+nav {
+    background: linear-gradient(#FFF8E7, rgba(0, 0, 0, 0.5) 40%);
+    height: 50px;
+    position: sticky;
+    top: 0;
+    display: flex;
+}
+.nav-logo {
+    width: calc(50% - 30px);
+    padding: 0 30px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    position: relative;
+    color: var(--orange);
+    border: white 1px solid;
+    
+}
+#awsLogo {
+    width: 50px;
+    aspect-ratio: 1;
+    object-fit: contain;
+}
+.nav-list {
+    width: 50%;
+    height: 100%;
+    border: white 1px solid;
+    position: relative;
+    display: flex;
+    justify-content: end;
+}
+.option-list {
+    list-style-type: none;
+    color: var(--textColor);
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 50%;
+}
