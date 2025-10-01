@@ -61,7 +61,7 @@ closeBtn.addEventListener('click', () => {
 
 });
 
-const widthLimit = 1000;
+const widthLimit = 1500;
 const navIcon = document.querySelector('.nav-icon');
 const navList = document.querySelector('.nav-list');
 
