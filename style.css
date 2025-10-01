@@ -36,6 +36,21 @@ body {
     border-radius: 50%;
     filter: blur(50px);
 }
+.nav-icon {
+  display: none; 
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 38px;
+  filter: invert();
+  cursor: pointer;
+}
+
+.nav-icon.show {
+  display: block; 
+}
+
 nav {
     height: 50px;
     position: sticky;

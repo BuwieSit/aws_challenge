@@ -60,3 +60,18 @@ closeBtn.addEventListener('click', () => {
     }
 
 });
+
+const widthLimit = 1000;
+const navIcon = document.querySelector('.nav-icon');
+const navList = document.querySelector('.nav-list');
+
+function toggleNavIcon() {
+  navIcon.classList.toggle('show', window.innerWidth <= widthLimit);
+}
+
+toggleNavIcon();
+window.addEventListener('resize', toggleNavIcon);
+
+navIcon.addEventListener('click', () => {
+  navList.classList.toggle('show');
+});
