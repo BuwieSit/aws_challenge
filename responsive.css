@@ -1,0 +1,29 @@
+
+@media screen and (max-width: 1000px) {
+    #title {
+       
+    }
+    .blackhole {
+        display: none;
+        opacity: 0;
+        pointer-events: none;
+    }
+    .events > * {
+        cursor: auto;
+    }
+    .about-divider, .about-divider > * {
+        cursor: auto;
+    }
+    .card {
+        opacity: 1;
+        transform: rotateY(0deg) rotateX(0deg) !important;
+    }
+    .card-desc {
+    width: 80%;
+    text-align: justify;
+    }
+    .mission-divider {
+        flex-direction: row-reverse;
+    }
+    
+}
