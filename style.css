@@ -11,7 +11,9 @@
     --orange: #FF9900;
     --textFont: "Poppins", sans-serif;    
     --textSize: 1.5rem;
+    --titleSize: 3rem;
     --violet: #AC74ED;
+    --darkviolet: #21013B;
 }
 .margin {
     margin-top: 10%;
@@ -20,7 +22,7 @@ body {
     background: black;
     background-size: cover;
     font-family: var(--textFont);
-
+    scroll-behavior: smooth;
 }
 .white-circle {
     position: absolute;
@@ -86,7 +88,12 @@ nav {
     transition: all 0.3s ease;
     text-shadow: 0px 0px 10px white;
 }
-.option-list > li:hover {
+a {
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+.option-list > li > a:hover {
     text-shadow: var(--violet) 0 0 30px;
     color: var(--violet);
     
@@ -119,9 +126,31 @@ span {
     text-align: center;
 }
 
-.mission {
+.about {
     position: relative;
     min-height: 500px;
+    display: flex;
+    gap: 30px;
+    color: white;
+    flex-direction: column;
+    cursor: none;
+}
+.section-title {
+    font-size: var(--titleSize);
+    align-self: center;
+    text-align: center;
+    color: white;
+}
+.about-divider {
+    max-width: 90%;
+    padding: 2% 1%;
+    align-self: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 50px;
+
 }
 .blackhole {
     width: 150px;
@@ -135,14 +164,118 @@ span {
     transition: width 0.2s ease, transform 0.05s linear;
     filter: invert(1deg);
     opacity: 0;
+    backdrop-filter: invert();
 }
 
 .card {
+    cursor: none;
     padding: 3%;
     width: 200px;
     height: 300px;
-    box-shadow: 0px 0px 50px var(--outside);
-    background-color: var(--outside);
+    box-shadow: 0px 0px 50px var(--violet);
     border-radius: 20px;
     transform: rotateY(20deg) rotateX(20deg);
+    transition: all 0.3s ease;
 }
+.card-desc {
+    width: 40%;
+    text-align: justify;
+}
+#missionCard {
+    transform: rotateY(20deg) rotateX(-20deg);
+}
+
+.card:hover {
+    transform: rotateY(0deg) rotateX(0deg) !important;
+    box-shadow: 0px 0px 50px var(--outside);
+}
+
+.events {
+    background: url('./assets/space.jpg') 100% repeat fixed;
+    background-size: cover;
+    padding: 5% 0;
+}
+.event-divider {
+    max-width: 90%;
+    padding: 2% 1%;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.event-card {
+    width: 300px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    box-shadow: 0px 0px 20px white;
+    backdrop-filter: blur(2px);
+    border-radius: 20px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.event-card:hover {
+    backdrop-filter: blur(10px);
+}
+.event-img {
+    width: 80%;
+}
+.show {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.event-popup {
+    z-index: 50;
+    width: 50%;
+    min-height: 40%;
+    max-height: 60%;
+    overflow: auto;
+    padding: 3%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px var(--violet);
+    background: rgba(255, 255, 255, 0.5);
+    scroll-behavior: smooth;
+}
+.event-popup::-webkit-scrollbar {
+    background-color: rgba(255, 255, 255, 0.5);
+}
+.event-popup::-webkit-scrollbar-thumb {
+    background-color: rgba(172, 116, 237, 0.5);
+}
+
+.popup-img {
+    width: 100%;
+}
+.popup-text {
+    width: 100%;
+    text-align: justify;
+}
+.close-btn {
+    width: 40px;
+    position: sticky;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    filter: drop-shadow(1px 1px 1px black);
+}
+
+.faqs {
+    background-color: red;
+    
+}
+
+footer {
+    width: 100%;
+    background: radial-gradient(ellipse at bottom, var(--outside), black 70%);
+    padding: 5% 0;
+}
+
