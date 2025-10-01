@@ -1,8 +1,10 @@
 
 @media screen and (max-width: 1000px) {
-    #title {
-       
+    .nav-list {
+        display: none;
+        pointer-events: none;
     }
+    
     .blackhole {
         display: none;
         opacity: 0;
@@ -25,5 +27,59 @@
     .mission-divider {
         flex-direction: row-reverse;
     }
+
+    .event-card {
+        width: clamp(60%, 2vw, 70%);
+    }
+
+    .faqs-answer {
+    max-height: 50px;
+    overflow: auto;
+    padding: 5% 2%;
+    }
     
+    .faqs-answer::-webkit-scrollbar {
+        background: rgba(0, 0, 0, 0.5);
+    }
+    .faqs-answer::-webkit-scrollbar-thumb {
+        background: rgba(255, 255 ,255, 0.5);
+    }
+
+    .bottom-banner {
+    background: url('./assets/awsBanner.jpg') 100% no-repeat center;
+    background-size: cover;
+     width: 100%;
+    height: 400px;
+    }
+
+    .footer-description {
+    width: 90%;
+    padding: 2% 1%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    flex-wrap: wrap;
+    }
+    .footer-logo {
+        align-items: center;
+        justify-content: center;
+    }
+    #footer-text {
+        max-width: 80%;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .faqs-answer {
+        max-height: 50px;
+        overflow: auto;
+        padding: 15% 2%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .nav-logo-name {
+        display: none;
+    }
 }

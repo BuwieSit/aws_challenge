@@ -55,8 +55,10 @@ nav {
     position: relative;
     color: var(--violet);
     font-weight: 500;
-    font-size: var(--textSize);
 
+}
+.nav-logo-name {
+    font-size: clamp(0.7rem, 5vw, 1.4rem);
 }
 #awsLogo {
     width: 50px;
@@ -348,11 +350,6 @@ span {
     background: rgba(48, 48, 48, 0.3);
 }
 
-.faqs-answer.open {
-    opacity: 1;
-    padding: 2% 2%;
-}
-
 .membership {
     background: url('./assets/galaxy.jpg') 100% fixed;
     background-size: cover;
@@ -429,18 +426,30 @@ footer {
     align-items: center;
     justify-content: space-between;
     color: white;
+ 
 }
 .contacts {
 
     justify-content: center;
  
 }
+
+.footer-logo-name {
+    font-size: clamp(0.8rem, 2vw, 2rem);
+}
 #footer-text {
-    max-width: 60%;
+    max-width: 50%;
+    font-size: clamp(0.6rem, 2vw, 1rem);
+    text-align: justify;
 }
 .footer-icons {
     width: 35px;
     filter: invert();
+}
+.copyright {
+    font-size: clamp(0.5rem, 1vw, 1.5rem);
+    color: #969696;
+    text-align: center;
 }
 
 
