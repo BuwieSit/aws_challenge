@@ -70,7 +70,7 @@
     .event-card {
         width: clamp(60%, 2vw, 70%);
     }
-    /* .event-popup {
+    .event-popup {
         z-index: 50;
         width: 50%;
         min-height: 40%;
@@ -88,7 +88,7 @@
         background-size: cover;
         background-blend-mode: lighten;
         scroll-behavior: smooth;
-    } */
+    }
     .faqs-answer {
     max-height: 50px;
     overflow: auto;
