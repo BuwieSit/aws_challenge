@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -7,21 +9,37 @@
     --outside:  #FFF8E7;
     --textColor: #F5F5DC;
     --orange: #FF9900;
+    --textFont: "Poppins", sans-serif;    
+    --textSize: 1.5rem;
+    --violet: #AC74ED;
 }
-.text-common {
-    
+.margin {
+    margin-top: 10%;
 }
 body {
-    background-color: black;
-    
+    background: black;
+    background-size: cover;
+    font-family: var(--textFont);
 
 }
+.white-circle {
+    position: absolute;
+    top: -10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: radial-gradient(white 20%, black 90%);
+    width: 700px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    filter: blur(50px);
+}
 nav {
-    background: linear-gradient(#FFF8E7, rgba(0, 0, 0, 0.5) 40%);
     height: 50px;
     position: sticky;
     top: 0;
     display: flex;
+    padding: 1% 0;
+    z-index: 100;
 }
 .nav-logo {
     width: calc(50% - 30px);
@@ -30,10 +48,12 @@ nav {
     display: flex;
     align-items: center;
     justify-content: start;
+    gap: 20px;
     position: relative;
-    color: var(--orange);
-    border: white 1px solid;
-    
+    color: var(--violet);
+    font-weight: 500;
+    font-size: var(--textSize);
+
 }
 #awsLogo {
     width: 50px;
@@ -43,16 +63,86 @@ nav {
 .nav-list {
     width: 50%;
     height: 100%;
-    border: white 1px solid;
     position: relative;
     display: flex;
     justify-content: end;
+
 }
 .option-list {
     list-style-type: none;
-    color: var(--textColor);
+    color: var(--outside);
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: end;
+    gap: 50px;
+    width: 100%;
+}
+.option-list > li {
+    cursor: pointer;
+    height: 100%;
+    align-content: center;
+    padding: 0 3%;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    text-shadow: 0px 0px 10px white;
+}
+.option-list > li:hover {
+    text-shadow: var(--violet) 0 0 30px;
+    color: var(--violet);
+    
+}
+
+.sections {
+    width: 100%;
+    padding: 3% 0;
+}
+.cover-page {
+    height: 70vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--outside);
+}
+.cover-page > * {
+    z-index: 10;
+}
+#title {
+    font-weight: 500;
+    font-size: 4rem;
+}
+span {
+    color: var(--orange);
+}
+#subtitle {
     width: 50%;
+    text-align: center;
+}
+
+.mission {
+    position: relative;
+    min-height: 500px;
+}
+.blackhole {
+    width: 150px;
+    aspect-ratio: 1;
+    background-color: transparent;
+    border-radius: 50%;
+    box-shadow: 0 0 50px var(--outside);
+    position: absolute;
+    z-index: 50;
+    pointer-events: none;
+    transition: width 0.2s ease, transform 0.05s linear;
+    filter: invert(1deg);
+    opacity: 0;
+}
+
+.card {
+    padding: 3%;
+    width: 200px;
+    height: 300px;
+    box-shadow: 0px 0px 50px var(--outside);
+    background-color: var(--outside);
+    border-radius: 20px;
+    transform: rotateY(20deg) rotateX(20deg);
 }
